@@ -54,7 +54,7 @@ export default {
       drawer: false,
       links:[
       {title:"Login", icon:"mdi-lock", url:"/login"},
-      {title:"Registration",icon:"mdi-face",url:"/registration"},
+      {title:"Registration",icon:"mdi-head",url:"/registration"},
       {title:"Orders",icon:"mdi-bookmark-multiple-outline",
       url:"/orders"},
       {title:"New ad", icon:"mdi-note-plus-outline", url:"/new"},
