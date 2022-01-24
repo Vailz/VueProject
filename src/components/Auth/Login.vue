@@ -74,13 +74,13 @@ export default {
 			]
 		} 	
 	},
-	computed: {
+computed: {
 		loading() {
 			return this.$store.getters.loading
-		},
-		error () {
-			return this.$store.getters.error
-		}
+		}//,
+		//error () {
+		//	return this.$store.getters.error
+		//}
 	},
 	methods: {
 		onSubmit(){
@@ -98,9 +98,19 @@ export default {
 				})
 			}
 		},
-		closeError () {
-			this.$store.dispatch('clearError')
-		}
+		//closeError () {
+		//	this.$store.dispatch('clearError')
+		//}//,
+		//onLogout () {
+		//	this.$store.dispatch('logoutUser')
+		//	this.$router.push("/")
+		//}
+	},
+	created () {
+		if (this.$route.query['loginError']) {
+		this.$store.dispatch('setError','Please login to access this page')
 	}
+	
+}
 } 
 </script>
