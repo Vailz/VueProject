@@ -50,6 +50,8 @@
 						<v-btn 
 						color="success"
 						@click="createAd" 
+						:loading="loading"
+						:disabled:="!valid || loading"
 						>Create Ad</v-btn>
 						</v-flex>
 					</v-layout>
@@ -76,7 +78,11 @@ export default {
 				promo: this.promo,
 				src: "https://cdn.vuetifyjs.com/images/cards/cooking.png"
 			}
-			this.$store.dispatch("createAd", ad)
+			this.$store.dispatch("createAds", ad)
+			.then(() => {
+			this.$router.push("/list")
+			})
+			.catch(() => {})
 			}
 		}
 	}

@@ -11,13 +11,13 @@ import Orders from '@/components/User/Orders'
 export default new Router({
 	routes: [
 	{
-		path:"",
+		path:"/",
 		name:"home",
 		component: Home
 	},
 	{
 		path:"/ad/:id",
-		props: true,
+		props:true,
 		name:"ad",
 		component:Ad
 	},

@@ -118,7 +118,7 @@ export default {
       } else {
         return [
         {title:"Login", icon:"mdi-lock", url:"/login"},
-        {title:"Registration", icon:"mdi-head", url:"/registration"},
+        {title:"Registration", icon:"mdi-face", url:"/registration"},
         ]
       }
     }

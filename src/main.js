@@ -18,6 +18,7 @@ new Vue({
     const firebaseConfig = {
       apiKey: "AIzaSyDke6xcfUkJYm5v02HZ0RTaHfBZiFPMxTo",
       authDomain: "ad-pro-d7232.firebaseapp.com",
+      databaseURL: "https://ad-pro-d7232-default-rtdb.firebaseio.com",
       projectId: "ad-pro-d7232",
       storageBucket: "ad-pro-d7232.appspot.com",
       messagingSenderId: "286426430265",
@@ -26,12 +27,13 @@ new Vue({
     };
   // Initialize Firebase
   fb.initializeApp(firebaseConfig);
-  fb.analytics();
+  fb.analytics()
   fb.auth().onAuthStateChanged(user => {
     if (user) {
       this.$store.dispatch('autoLoginUser', user)
     }
- })
- this.$store.dispatch('fetchAds')
+
+  })
+  this.$store.dispatch('fetchAds')
 }
 }).$mount('#app')
